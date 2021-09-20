@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(52, 44, 69);
+  margin: 0;
+  padding: 0;
+}
+
+body, button, input {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 26px;
+}
+
+body, button, input {
+  color: rgb(13, 41, 194);
+}
+
+form {
+  background-color: rgb(130, 131, 81);
+}
