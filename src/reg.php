@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 
-<!-- The first page of the web application. -->
+<!-- The sign up (registration) page. -->
 
 <html lang="en">
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Mowbray</title>
+<title>Sign up</title>
 
+<link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 
@@ -22,6 +23,9 @@
 
   <label for="password">Password:</label>
   <input type="password" id="password" name="password">
+
+  <label for="password">Retype password:</label>
+  <input type="password" id="repasswd" name="repasswd">
 
   <button type="button">Sign in</button>
   <button type="button">Sign up</button>

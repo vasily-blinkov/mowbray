@@ -1,0 +1,2 @@
+# Composer will restore this directory when using `composer update`
+src/vendor/
