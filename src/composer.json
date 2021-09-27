@@ -1,5 +1,11 @@
 {
   "require": {
-    "twbs/bootstrap": "5.1.1"
+    "twbs/bootstrap": "5.1.1",
+    "twig/twig": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mowbray\\": "classes/"
+    }
   }
 }

@@ -1,6 +1,16 @@
+<?php
+  declare(strict_types=1);
+  namespace Mowbray;
+  require_once 'vendor/autoload.php';
+
+  use \Mowbray\Request;
+  use \Twig\Environment;
+  use \Twig\Loader\FilesystemLoader;
+?>
+
 <!DOCTYPE html>
 
-<!-- The first page of the web application. -->
+<!-- The master page. -->
 
 <html lang="en">
 <head>
@@ -16,16 +26,12 @@
 </head>
 <body>
 
-<form>
-  <label for="email">E-mail:</label>
-  <input type="text" id="email" name="email">
-
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password">
-
-  <button type="button">Sign in</button>
-  <button type="button">Sign up</button>
-</form>
+<?
+  $loader = new FilesystemLoader('templates');
+  $twig = new Environment($loader);
+  $template = $twig->load(Request::page($_REQUEST));
+  echo $template->render($_REQUEST);
+?>
 
 </body>
 </html>
