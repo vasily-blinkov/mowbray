@@ -1,11 +1,15 @@
 <form>
-  <label for="email">E-mail:</label>
-  <input type="text" id="email" name="email">
-
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password">
-
-  <button type="button">Sign in</button>
-  <button type="button">Sign up</button>
+  <div class="form-group">
+    <label for="email">E-mail:</label>
+    <input type="email" class="form-control" id="email" placeholder="" name="email">
+  </div>
+  
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password" name="password">
+  </div>
+  
+  <button type="button" class="btn btn-link">Sign up</button>
+  <button type="submit" class="btn-primary">Sign in</button>
 </form>
 

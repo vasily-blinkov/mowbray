@@ -8,9 +8,13 @@ body {
   padding: 0;
 }
 
-body, button, input {
+body, button.btn-link, input {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 26px;
+}
+
+button.btn-link {
+  color: rgb(52, 44, 69);
 }
 
 body, button, input {
@@ -19,4 +23,9 @@ body, button, input {
 
 form {
   background-color: rgb(130, 131, 81);
+  padding: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
 }

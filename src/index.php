@@ -20,18 +20,21 @@
 
 <title>Mowbray</title>
 
-<link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
 
+<div class="container">
 <?
   $loader = new FilesystemLoader('templates');
   $twig = new Environment($loader);
   $template = $twig->load(Request::page($_REQUEST));
   echo $template->render($_REQUEST);
 ?>
+</div>
 
 </body>
 </html>
