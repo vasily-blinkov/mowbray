@@ -12,11 +12,11 @@ class Request {
       or !is_array($request)
       or empty($request['page'])
       or !is_string($request['page'])
-      or !file_exists(__DIR__ . "/../templates/{$request['page']}.php"))
+      or !file_exists(__DIR__ . "/../templates/{$request['page']}.twig"))
     {
       return 'index.php';
     } else {
-      return "{$request['page']}.php";
+      return "{$request['page']}.twig";
     }
   }
 
