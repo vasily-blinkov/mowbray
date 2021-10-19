@@ -10,14 +10,13 @@ class Request {
   static function page($request) {
     if (empty($request)
       or !is_array($request)
-      or empty($request['page'])
-      or !is_string($request['page'])
-      or !file_exists(__DIR__ . "/../templates/{$request['page']}.twig"))
+      or empty($page = $request['page'])
+      or !is_string($page)
+      or !file_exists(__DIR__ . "/../templates/{$page}.twig"))
     {
-      return 'index.php';
-    } else {
-      return "{$request['page']}.twig";
+      $page = 'index';
     }
+    return "{$page}.twig";
   }
 
 }
