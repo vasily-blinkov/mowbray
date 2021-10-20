@@ -5,7 +5,7 @@
 body {
   background-color: rgb(52, 44, 69);
   margin: 0;
-  padding: 0;
+  padding: 4.5rem 0 0 0;
 }
 
 body, button.btn-link, input {

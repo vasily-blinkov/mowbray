@@ -27,14 +27,12 @@
 </head>
 <body>
 
-<div class="container">
 <?
   $loader = new FilesystemLoader('templates');
   $twig = new Environment($loader);
   $template = $twig->load(Request::page($_REQUEST));
   echo $template->render($_REQUEST);
 ?>
-</div>
 
 </body>
 </html>
