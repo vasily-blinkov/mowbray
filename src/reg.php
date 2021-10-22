@@ -5,6 +5,6 @@
 
   use \Mowbray\Renderer;
 
-  Renderer::render('chklst');
+  Renderer::render('reg');
 ?>
 

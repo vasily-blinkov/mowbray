@@ -3,14 +3,8 @@
   namespace Mowbray;
   require_once 'vendor/autoload.php';
 
-  use \Mowbray\Request;
-  use \Twig\Environment;
-  use \Twig\Loader\FilesystemLoader;
-?>
+  use \Mowbray\Renderer;
 
-<?
-  $loader = new FilesystemLoader('templates');
-  $twig = new Environment($loader);
-  echo $twig->render(Request::page($_REQUEST), $_REQUEST);
+  Renderer::render('index');
 ?>
 
