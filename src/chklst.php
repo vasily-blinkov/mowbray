@@ -5,6 +5,8 @@
 
   use \Mowbray\Renderer;
 
-  Renderer::render('chklst');
+  Renderer::render('chklst', [
+    'subtitle' => 'Checklist'
+  ]);
 ?>
 

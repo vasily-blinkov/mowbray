@@ -11,8 +11,9 @@
     private static FilesystemLoader $loader;
     private static Environment $twig;
 
-    static function render(string $template) {
-      echo self::getEnvironment()->render("{$template}.twig");
+    static function render(string $name, array $variables = []) {
+      $template = self::getEnvironment()->load("{$name}.twig");
+      echo  $template->render($variables);
     }
 
     private static function getEnvironment(): Environment {
