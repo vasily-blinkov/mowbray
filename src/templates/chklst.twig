@@ -1,5 +1,12 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-  <p>Do not allow children to enter the construction checklist page!</p>
+  {% for row in checklist.rows %}
+    <div class="row">
+      <div class="col-8 text-truncate">{{ row.name|e }}</div>
+      <div class="col-2">
+	<a href="#" role="button" class="btn btn-secondary" title="Name" data-bs-content="{{ row.name|e('html_attr') }}">?</a>
+      </div>
+    </div>
+  {% endfor %}
 {% endblock %}

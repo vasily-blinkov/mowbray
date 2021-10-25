@@ -18,7 +18,12 @@ class ChecklistRows {
     $upskilling->checklist_id = $checklist_id;
     $upskilling->name = 'Повышение квалификации';
 
-    return [ $morning_pt, $upskilling ];
+    $soft = new ChecklistRowModel;
+    $soft->id = 10 * $checklist_id + 3;
+    $soft->checklist_id = $checklist_id;
+    $soft->name = 'Изучение программного обеспечения электроников';
+
+    return [ $morning_pt, $upskilling, $soft ];
   }
 }
 
