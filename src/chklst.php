@@ -10,7 +10,10 @@
 
   Renderer::render('chklst', [
     'subtitle' => "Checklist: {$checklist->name}",
-    'checklist' => $checklist
+    'checklist' => $checklist,
+    'scripts' => [
+      'popovers'
+    ]
   ]);
 ?>
 
