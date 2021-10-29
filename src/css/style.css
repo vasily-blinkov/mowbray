@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  min-width: 256px;
+}
+
 body {
   background-color: rgb(52, 44, 69);
   margin: 0;
