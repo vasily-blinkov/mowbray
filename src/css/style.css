@@ -7,13 +7,14 @@ html {
 }
 
 body {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-shadow: -1px -1px 3px white;
   background-color: rgb(52, 44, 69);
   margin: 0;
   padding: 4.5rem 0 0 0;
 }
 
-body, button.btn-link, input {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+body, button.btn-link, button.btn-primary, input {
   font-size: 26px;
 }
 
