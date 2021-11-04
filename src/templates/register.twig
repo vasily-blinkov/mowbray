@@ -1,6 +1,11 @@
 {% extends 'base.twig' %}
 
 {% block content %}
+  <div class="row">
+    <div class="col-2 offset-10">
+      {{ register.items[register.items|length - 1].name }}
+    </div>
+  </div>
   {% for row in register.checklist.rows %}
     <div class="row">
       <div class="col-8 text-truncate">{{ row.name|e }}</div>
