@@ -23,7 +23,17 @@ class ChecklistRows {
     $soft->checklist_id = $checklist_id;
     $soft->name = 'Изучение программного обеспечения электроников';
 
-    return [ $morning_pt, $upskilling, $soft ];
+    $shower = new CheckListRowModel;
+    $shower->id = 10 * $checklist_id + 4;
+    $shower->checklist_id = $checklist_id;
+    $shower->name = 'Приём душа';
+
+    $news = new ChecklistRowModel;
+    $news->id = 10 * $checklist_id + 5;
+    $news->checklist_id = $checklist_id;
+    $news->name = 'Посмотреть новости';
+
+    return [ $morning_pt, $upskilling, $soft, $shower, $news ];
   }
 }
 
