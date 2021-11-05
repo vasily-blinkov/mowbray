@@ -3,3 +3,7 @@ src/vendor/
 
 # Emacs backup files
 **/*~
+
+# Ex lock files
+**/.~lock.*#
+
