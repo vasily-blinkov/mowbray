@@ -10,11 +10,11 @@ use \Mowbray\DataModels\Checklist as ChecklistModel;
  * Instance of Checklist
  */
 class Register {
-  public int $id;
-  public int $checklist_id;
-  public ChecklistModel $checklist;
-  public string $name;
-  public array $items;
+  public ?int $id = null;
+  public ?int $checklist_id = null;
+  public ?ChecklistModel $checklist = null;
+  public ?string $name = null;
+  public ?array $items = null;
 }
 
 ?>

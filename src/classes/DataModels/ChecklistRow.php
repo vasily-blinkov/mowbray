@@ -5,9 +5,9 @@ namespace Mowbray\DataModels;
 require_once 'vendor/autoload.php';
 
 class ChecklistRow {
-  public int $id;
-  public int $checklist_id;
-  public string $name;
+  public ?int $id = null;
+  public ?int $checklist_id = null;
+  public ?string $name = null;
 }
 
 ?>

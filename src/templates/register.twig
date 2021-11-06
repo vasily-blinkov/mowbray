@@ -3,7 +3,8 @@
 {% block content %}
   <div class="row">
     <div class="col-2 offset-10 text-center">
-      {{ register.items[register.items|length - 1].name }}
+      {% set item = register.items[register.items|length - 1] %}
+      {{ item.name }}
     </div>
   </div>
   {% for row in register.checklist.rows %}
@@ -23,7 +24,9 @@
 	</a>
       </div>
       <div class="col-2 text-center">
-        <div class="progress-spin ps-75">
+        {% set checkmark = attribute(checkmark_resolver, 'get', [item.checkmarks, row.id]) %}
+        {% set percent = checkmark is none ? 0 : checkmark.percent %}
+        <div class="progress-spin ps-{{ percent }}">
           <div class="progress-spin-inner"></div>
         </div>
       </div>

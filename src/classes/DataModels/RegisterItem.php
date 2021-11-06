@@ -8,9 +8,10 @@ require_once 'vendor/autoload.php';
  * Single column in Register
  */
 class RegisterItem {
-  public int $id;
-  public int $register_id;
-  public string $name;
+  public ?int $id = null;
+  public ?int $register_id = null;
+  public ?string $name = null;
+  public ?array $checkmarks = null;
 }
 
 ?>
