@@ -28,7 +28,6 @@ div.progress-spin div.progress-spin-inner {
   border-width: 0px;
   position: relative;
   bottom: 15px;
-  left: 4px;
 }
 div.progress-spin.ps-0 {
   border-top-color: rgb(52, 44, 69);
