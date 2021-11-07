@@ -2,15 +2,15 @@
 
 {% block content %}
   <div class="row">
-    <div class="col-2 offset-10 text-center">
+    <div class="col-2 offset-10 col-md-3 offset-md-9 text-center">
       {% set item = register.items[register.items|length - 1] %}
       {{ item.name }}
     </div>
   </div>
   {% for row in register.checklist.rows %}
     <div class="row">
-      <div class="col-8 text-truncate">{{ row.name|e }}</div>
-      <div class="col-2">
+      <div class="col-8 col-sm-9 col-md-8 text-truncate">{{ row.name|e }}</div>
+      <div class="col-2 col-sm-1">
 	<a
 	  href="#"
 	  role="button"
@@ -23,7 +23,7 @@
 	  ?
 	</a>
       </div>
-      <div class="col-2 text-center">
+      <div class="col-2 col-md-3 text-center">
         {% set checkmark = attribute(checkmark_resolver, 'get', [item.checkmarks, row.id]) %}
         {% set percent = checkmark is none ? 0 : checkmark.percent %}
         <div class="progress-spin ps-{{ percent }}">
@@ -32,4 +32,15 @@
       </div>
     </div>
   {% endfor %}
+  <div class="row">
+    <div class="d-sm-none">
+      xs
+    </div>
+    <div class="d-none d-sm-block d-md-none">
+      sm
+    </div>
+    <div class="d-none d-md-block">
+      md
+    </div>
+  </div>
 {% endblock %}
