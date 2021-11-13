@@ -9,21 +9,23 @@ use \Mowbray\DataModels\RegisterItem as RegisterItemModel;
 
 class RegisterItems {
   function get(int $register_id): array {
-    $checkmarks = new RegisterItemCheckmarks;
+    $items = [];
 
-    $three = new RegisterItemModel;
-    $three->register_id = $register_id;
-    $three->id = 22;
-    $three->name = '03';
-    $three->checkmarks = $checkmarks->get($three->id);
+    for ($day = 1; $day <= 12; $day++) {
+      $items[] = $this->get_item($day, $register_id);
+    }
 
-    $four = new RegisterItemModel;
-    $four->register_id = $register_id;
-    $four->id = 24;
-    $four->name = '04';
-    $four->checkmarks = $checkmarks->get($four->id);
+    return $items;
+  }
 
-    return [$three, $four];
+  private function get_item(int $day, int $register_id): RegisterItemModel {
+    $item = new RegisterItemModel;
+    $item->register_id = $register_id;
+    $item->id = 24 + $day;
+    $item->name = str_pad(strval($day), 2, '0', STR_PAD_LEFT);
+    $item->checkmarks = (new RegisterItemCheckmarks)->get($item->id);
+
+    return $item;
   }
 }
 
