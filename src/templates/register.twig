@@ -28,26 +28,28 @@
     </div>
 
     <div class="col-6 register">
-      <div class="row">
-        {% for item in register.items %}
-          <div class="col text-center">
-            {{ item.name|e }}
+      <div class="container register-item-checkmarks">
+        <div class="row-register-item-checkmarks">
+          {% for item in register.items %}
+            <div class="col-register-item-checkmark text-center">
+              {{ item.name|e }}
+            </div>
+          {% endfor %}
+        </div>
+        {% for row in register.checklist.rows %}
+          <div class="row-register-item-checkmarks">
+          {% for item in register.items %}
+            <div class="col-register-item-checkmark text-center">
+              {% set checkmark = attribute(checkmark_resolver, 'get', [item.checkmarks, row.id]) %}
+              {% set percent = checkmark is none ? 0 : checkmark.percent %}
+              <div class="progress-spin ps-{{ percent }}">
+                <div class="progress-spin-inner"></div>
+              </div>
+            </div>
+          {% endfor %}
           </div>
         {% endfor %}
       </div>
-      {% for row in register.checklist.rows %}
-        <div class="row">
-        {% for item in register.items %}
-          <div class="col text-center">
-            {% set checkmark = attribute(checkmark_resolver, 'get', [item.checkmarks, row.id]) %}
-            {% set percent = checkmark is none ? 0 : checkmark.percent %}
-            <div class="progress-spin ps-{{ percent }}">
-              <div class="progress-spin-inner"></div>
-            </div>
-          </div>
-        {% endfor %}
-        </div>
-      {% endfor %}
     </div>
   </div>
 
