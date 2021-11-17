@@ -1,5 +1,6 @@
 .register-item-checkmarks {
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .row-register-item-checkmarks {
