@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc616b10e91f2a18a655bdcb0f6b82a0",
+    "content-hash": "e639e3c5f2bb8aa54b8dd2571b4c8af5",
     "packages": [
         {
             "name": "symfony/polyfill-ctype",
@@ -214,6 +214,45 @@
                 "source": "https://github.com/twbs/bootstrap/tree/v5.1.1"
             },
             "time": "2021-09-07T15:37:44+00:00"
+        },
+        {
+            "name": "twbs/bootstrap-icons",
+            "version": "v1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/icons.git",
+                "reference": "4954c4e98ec519fae782f90bf103e842b6e7fb4a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/icons/zipball/4954c4e98ec519fae782f90bf103e842b6e7fb4a",
+                "reference": "4954c4e98ec519fae782f90bf103e842b6e7fb4a",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "Official open source SVG icon library for Bootstrap",
+            "homepage": "https://icons.getbootstrap.com/",
+            "keywords": [
+                "bootstrap",
+                "icon font",
+                "icons",
+                "svg"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/icons/issues",
+                "source": "https://github.com/twbs/icons/tree/v1.7.1"
+            },
+            "time": "2021-11-16T17:04:08+00:00"
         },
         {
             "name": "twig/twig",
