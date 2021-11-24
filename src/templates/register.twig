@@ -2,16 +2,16 @@
 
 {% block content %}
   <div class="row">
-    <div class="col-6 checklist">
+    <div class="col-6 col-lg-5 checklist">
       <div class="row">
         &nbsp;
       </div>
       {% for row in register.checklist.rows %}
         <div class="row">
-          <div class="col-9 text-truncate">
+          <div class="col-9 col-md-10 text-truncate">
             {{ row.name|e }}
           </div>
-          <div class="col-3">
+          <div class="col-3 col-md-2 text-center">
             <a
               href="#"
               role="button"
@@ -27,7 +27,7 @@
       {% endfor %}
     </div>
 
-    <div class="col-6 register">
+    <div class="col-6 col-lg-7 register">
       <div class="container-fluid register-item-checkmarks">
         <div class="row-register-item-checkmarks">
           {% for item in register.items %}
@@ -63,8 +63,11 @@
     <div class="d-none d-md-block d-lg-none">
       md
     </div>
-    <div class="d-none d-lg-block">
+    <div class="d-none d-lg-block d-xl-none">
       lg
+    </div>
+    <div class="d-none d-xl-block d-xxl-none">
+      xl
     </div>
   </div>
 
