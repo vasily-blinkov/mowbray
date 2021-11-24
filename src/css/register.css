@@ -1,3 +1,9 @@
+.checklist .row {
+  min-height: 48px;
+  height: 48px;
+  max-height: 48px;
+}
+
 .register-item-checkmarks {
   overflow-x: auto;
   overflow-y: hidden;
@@ -5,6 +11,9 @@
 
 .row-register-item-checkmarks {
   display: flex;
+  min-height: 48px;
+  height: 48px;
+  max-height: 48px;
 }
 
 .col-register-item-checkmark {
