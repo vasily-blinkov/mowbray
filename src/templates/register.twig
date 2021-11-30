@@ -2,7 +2,7 @@
 
 {% block content %}
   <div class="row">
-    <div class="col-6 col-lg-5 checklist">
+    <div class="col-6 col-lg-5 col-xxl-4 checklist">
       <div class="row">
         &nbsp;
       </div>
@@ -27,7 +27,7 @@
       {% endfor %}
     </div>
 
-    <div class="col-6 col-lg-7 register">
+    <div class="col-6 col-lg-7 col-xxl-8 register">
       <div class="container-fluid register-item-checkmarks">
         <div class="row-register-item-checkmarks">
           {% for item in register.items %}
@@ -68,6 +68,9 @@
     </div>
     <div class="d-none d-xl-block d-xxl-none">
       xl
+    </div>
+    <div class="d-none d-xxl-block">
+      xxl
     </div>
   </div>
 
