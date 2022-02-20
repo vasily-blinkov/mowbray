@@ -7,3 +7,4 @@ src/vendor/
 # Ex lock files
 **/.~lock.*#
 
+az/infra/_overrides.sh
